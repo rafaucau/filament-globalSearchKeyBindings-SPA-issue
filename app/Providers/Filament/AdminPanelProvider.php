@@ -24,6 +24,11 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            // ------
+            ->spa()
+            ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
+            ->globalSearchFieldKeyBindingSuffix()
+            // ------
             ->default()
             ->id('admin')
             ->path('admin')
